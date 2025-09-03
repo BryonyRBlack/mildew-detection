@@ -32,7 +32,7 @@ def page_leaf_visualizer_body():
             )
             st.image(diff_between_avgs, caption="Difference between Average Images")
         if st.checkbox("Image Montage"):
-            st.write("To refresh, click 'Create Montage"):
+            st.write("To refresh, click 'Create Montage")
             my_data_dir="inputs/datasets/cherry-leaves"
             labels = os.listdir(my_data_dir+ "/validation")
             label_to_display = st.selectbox(label="Select a label", options=labels, index=0)
