@@ -1,3 +1,2 @@
-/workspaces/mildew-detection/inputs/datasets/cherry-leaves/test
-/workspaces/mildew-detection/inputs/datasets/cherry-leaves/train
-/workspaces/mildew-detection/inputs/datasets/cherry-leaves/validation
+/mildew-detection/inputs/datasets/cherry-leaves/test/*
+/mildew-detection/inputs/datasets/cherry-leaves/train/*
