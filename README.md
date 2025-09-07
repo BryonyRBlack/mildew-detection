@@ -1,47 +1,9 @@
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-## Template Instructions
-
-Welcome,
-
-This is the Code Institute student template for the Cherry Leaves project option in Predictive Analytics. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
-1. In your newly created repo click on the green Code button. 
-
-1. Then, from the Codespaces tab, click Create codespace on main.
-
-1. Wait for the workspace to open. This can take a few minutes.
-
-1. Open a new terminal and `pip3 install -r requirements.txt`
-
-1. Open the jupyter_notebooks directory, and click on the notebook you want to open.
-
-1. Click the kernel button and choose Python Environments.
-
-Note that the kernel says Python 3.12.1 as it inherits from the workspace, so it will be Python-3.12.1 as installed by Codespaces. To confirm this, you can use `! python --version` in a notebook code cell.
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, then you can create a new one with _Regenerate API Key_.
-
 ## Dataset Content
 
-- The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-- The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+- The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
+- The dataset contains 4,208 images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
 
 ## Business Requirements
 
@@ -54,24 +16,81 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Hypothesis and how to validate?
 
-- List here your project hypothesis(es) and how you envision validating it (them).
+### Hypothesis
+
+- That cherry leaves infexted with powdery mildew have a different apperance than healthy cherry leaves.
+
+### Validation
+
+### Dataset
+
+- A visual analysis was completeld on the data to see if there was any notable differences. As such, it was possible to note that there was a powdery substance on the leaves infected with Powdery Mildew.
+
+A healthy leaf looks like:
+
+![Image of a healthy leaf.](/outputs/v1/healthy%20leaves.png)
+
+Whilst a leaf with Powdery Mildew:
+
+![Image of a leaf that is infected with Powdery Mildew](/outputs/v1/powdery%20mildew%20leaves.png)
+
+- To further analyse this, average and variability images were created
+
+![Average and variability images for an infected leaf](/outputs/v1/avg_var_powdery_mildew.png)
+![Average and variability images for an infected leaf](/outputs/v1/avg_var_healthy.png)
+
+This showed a clear visual difference between the healthy and infected leaves.
+
+### Model Development
+
+- To train a model to be able to differentiate between a healthy and infected leaf. This was then evaluated to check it's accuracy.
+
+![Image showing the accuracy after model training](/outputs/v1/model_training_acc.png)
+![Image showing the losses after model training](/outputs/v1/model_training_losses.png)
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
-- List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+- Business Requirement #1
+  - average images and variability images for each class (healthy or powdery mildew),
+  - the differences between average healthy and average powdery mildew cherry leaves,
+  - an image montage for each class.
+- Business Requirement #2
+  - You may deliver an ML system that is capable of predicting whether a cherry leaf is healthy or contains powdery mildew. In this case, we suggest to use Neural Networks to map the relationships between the features and the labels.
 
 ## ML Business Case
 
-- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+- We want a ML model that can quickly identify if a cherry leafe is infected with Powdery Mildew.
+- This should also show the difference between infected and non-infectead leaves
 
 ## Dashboard Design
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-- Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
+### Quick Project Summary
+
+- Provides an explanation about what Powdery Mildew is.
+- Provides a link to Kaggle dataset that has been used.
+- Advises that further information is in the ReadMe
+- Confirms the Business Requirements
+
+### Project Hypothesis
+
+- Advises that the hypothesis is that it is possible to distinguish leaves with Powdery Mildew, from healthy leaves.
+- Using the data analysis, is able to validate.
+
+### Leaf Visualizer
+
+- Shows images of leaves with Powdery Mildew, and healthy leaves.
+- A montage is available for the user to view.
+
+### Mildew Detection
+
+- Allows for an image to be uploaded to predict if Powdery Mildew is present. Alternativly, an image can be downloaded from the dataset.
+- Multiple images can be uploaded for a prediction.
+- An analysis report is provided, this can be downloaded.
 
 ## Unfixed Bugs
 
 - You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+- There are currently no unfixed bugs.
 
 ## Deployment
 
@@ -90,12 +109,23 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Main Data Analysis and Machine Learning Libraries
 
-- Here, you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+- numpy - to convert information into arrays
+- pandas - for creating and saving dataframes
+- matplotlib - for plotting the datasets distribution
+- plotly - for plotting the ML learning curve
+- streamlit - for creating the dashboard
+- joblib - for running tasks
+- scikit-learn - for model evaluation
+- tensorflow-cpu - for model creation
+- keras>=3.0.0 - for model hyperparameters
+- render - for hosting the dashboard
+- git/github - for writing and storing the code
+- kaggle - for the data used in the project
 
 ## Credits
 
-- In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism.
-- You can break the credits section up into Content and Media, depending on what you have included in your project.
+- Whilst creating this project, I used Code Institute's Malaria testing walkthrough project videos as a guide.
+- The template used, is the one provided by Code Institute
 
 ### Content
 
