@@ -11,3 +11,4 @@ kaggle.json
 inputs/datasets/cherry-leaves/test
 inputs/datasets/cherry-leaves/train
 inputs/datasets/cherry-leaves/validation
+outputs/v1
