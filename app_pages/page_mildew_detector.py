@@ -5,7 +5,7 @@ import pandas as pd
 import tensorflow as tf
 from tensorflow import keras
 from src.data_management import download_dataframe_as_csv
-from src.machine_learning_predictive_analysis import(load_model_and_predict, resize_input_image, plot_predictions_probabilities)
+from src.machine_learning.predictive_analytics import(load_model_and_predict, resize_input_image, plot_predictions_probabilities)
 
 def page_mildew_detector_body():
     st.info(f"To answer business requirement #2:"
