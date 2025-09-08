@@ -11,7 +11,7 @@ import random
 def page_leaf_visualizer_body():
     st.write("~~~ Leaf Visualizer ~~~")
     st.info(
-        f"This is to answer business requirement #1:"
+        f"This is to answer business requirement #1:\n"
         f"* The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew"
     )
     version = "v1"
@@ -19,7 +19,7 @@ def page_leaf_visualizer_body():
         avg_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
         avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
         st.warning(
-            f"There is a difference between the healthy leaves and those with mildew."
+            f"There is a difference between the healthy leaves and those with mildew.\n"
             f"The healthy leaves are green, whilst the Mildew shows as white dots over the leaf"
         )
         st.image(avg_mildew, caption="Powdery Mildew Infected leaf - Average and Variability")

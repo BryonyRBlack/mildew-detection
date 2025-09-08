@@ -15,7 +15,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
 
     prob_per_class = pd.DataFrame(
         data=[0, 0],
-        index={'Parasitised': 0, 'Uninfected': 1}.keys(),
+        index={'Powdery Mildew': 0, 'Healthy': 1}.keys(),
         columns=['Probability']
     )
     prob_per_class.loc[pred_class] = pred_proba
@@ -38,7 +38,7 @@ def resize_input_image(img, version):
     """
     Reshape image to average image size
     """
-    image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pkl")
+    image_shape = load_pkl_file(file_path=f"outputs/{version}/image_shape.pk1")
     img_resized = img.resize((image_shape[1], image_shape[0]), Image.LANCZOS)
     my_image = np.expand_dims(img_resized, axis=0)/255
 
@@ -50,17 +50,17 @@ def load_model_and_predict(my_image, version):
     Load and perform ML prediction over live images
     """
 
-    model = load_model(f"outputs/{version}/malaria_detector_model.h5")
+    model = load_model(f"outputs/{version}/mildew-detector_model.h5")
 
     pred_proba = model.predict(my_image)[0, 0]
 
-    target_map = {v: k for k, v in {'Parasitised': 0, 'Uninfected': 1}.items()}
+    target_map = {v: k for k, v in {'Powdery Mildew': 0, 'Healthy': 1}.items()}
     pred_class = target_map[pred_proba > 0.5]
     if pred_class == target_map[0]:
         pred_proba = 1 - pred_proba
 
     st.write(
         f"The predictive analysis indicates the sample cell is "
-        f"**{pred_class.lower()}** with malaria.")
+        f"**{pred_class.lower()}** infected with Powdery Mildew.")
 
     return pred_proba, pred_class
