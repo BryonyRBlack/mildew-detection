@@ -94,18 +94,20 @@ This showed a clear visual difference between the healthy and infected leaves.
 
 ## Deployment
 
-### Heroku
+### Render
 
-- The App live link is: `https://YOUR_APP_NAME.herokuapp.com/`
+- The App live link is: `[https://YOUR_APP_NAME.herokuapp.com/](https://mildew-detection-xff2.onrender.com/)`
 - Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-- The project was deployed to Heroku using the following steps.
+- The project was deployed to Render using the following steps.
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
+1. Log in to Render and create a Web Service
+2. At the Soure Code, select GitHub as the deployment method.
+3. Input the html code, and click connect.
+4. Name the Web Page, and confirm the coding language as Python, and the branch.
+5. Set the Build Command as: pip install -r requirements.txt && ./setup.sh
+6. Set the Start Command as: streamlit run app.py
+7. Build the app.
+8. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 
 ## Main Data Analysis and Machine Learning Libraries
 
