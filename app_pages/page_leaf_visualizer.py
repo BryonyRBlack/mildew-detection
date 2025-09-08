@@ -17,7 +17,7 @@ def page_leaf_visualizer_body():
     version = "v1"
     if st.checkbox("Difference between average and variability image"):
         avg_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
-        avg_healthy = plt.imread(f"/outputs/v1/avg_var_healthy.png")
+        avg_healthy = plt.imread(f"/outputs/{version}/avg_var_healthy.png")
         st.warning(
             f"There is a difference between the healthy leaves and those with mildew."
             f"The healthy leaves are green, whilst the Mildew shows as white dots over the leaf"
@@ -26,7 +26,7 @@ def page_leaf_visualizer_body():
         st.image(avg_healthy, caption="Healthy Leaf - Average and Variability")
         st.write("~~~")
         if st.checkbox("Differences between leaves"):
-            diff_between_avgs = plt.imread("outputs/v1/avg_diff.png")
+            diff_between_avgs = plt.imread("/outputs/{version}/avg_diff.png")
             st.warning(
                 f"We notice that the healthy leaves are greener than the infected"
             )
