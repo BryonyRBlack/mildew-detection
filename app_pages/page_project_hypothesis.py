@@ -2,7 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 def page_project_hypothesis_body():
-    st.write(f"~~ Project Hypothesis and Validation ~~")
+    st.write(f"Project Hypothesis and Validation")
     st.info(
         f"Cherry leaves infexted with powdery mildew have a different apperance than healthy cherry leaves.\n"
         f"Typically, this is white spots on an infected leaf."

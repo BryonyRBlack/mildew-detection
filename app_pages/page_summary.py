@@ -2,7 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 def page_summary_body():
-    st.write(f"~~~ Quick Prokect Summary ~~~")
+    st.write(f"Quick Prokect Summary")
     st.info(
         f"**General Information**\n\n"
         f"Powdery mildew is caused by Podosphaera clandestina, an obligate biotrophic fungus."
@@ -12,7 +12,7 @@ def page_summary_body():
         f"and consequently to protect developing fruit from accumulating spores on their surfaces."
     )
     st.write(
-        f"**Dataset**\n\n"
+        f"Dataset\n\n"
         f"The dataset contains 4,208 images of cherry leaves."
         f"Half of these are healthy leaves, the other have Powdery Mildew"
         f"The dataset is availble from Kaggle [here](https://www.kaggle.com/codeinstitute/cherry-leaves)"
