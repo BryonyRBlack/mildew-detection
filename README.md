@@ -1,4 +1,4 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ![Header image saying Powdery Mildew Detector](/assests/images/Brown%20Aesthetic%20Email%20header.png)
 
 ## Dataset Content
 
@@ -96,7 +96,7 @@ This showed a clear visual difference between the healthy and infected leaves.
 
 ### Render
 
-- The App live link is: `[https://YOUR_APP_NAME.herokuapp.com/](https://mildew-detection-xff2.onrender.com/)`
+- The App live link is: `[here](https://mildew-detection-xff2.onrender.com/)`
 - Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 - The project was deployed to Render using the following steps.
 
