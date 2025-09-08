@@ -17,7 +17,7 @@ def page_leaf_visualizer_body():
     version = "v1"
     if st.checkbox("Difference between average and variability image"):
         avg_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
-        avg_healthy = plt.imread(f"/outputs/{version}/avg_var_healthy.png")
+        avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
         st.warning(
             f"There is a difference between the healthy leaves and those with mildew."
             f"The healthy leaves are green, whilst the Mildew shows as white dots over the leaf"
@@ -26,7 +26,7 @@ def page_leaf_visualizer_body():
         st.image(avg_healthy, caption="Healthy Leaf - Average and Variability")
         st.write("~~~")
         if st.checkbox("Differences between leaves"):
-            diff_between_avgs = plt.imread("/outputs/{version}/avg_diff.png")
+            diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
             st.warning(
                 f"We notice that the healthy leaves are greener than the infected"
             )
@@ -68,7 +68,7 @@ def image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15,10)):
             axes[plot_idx[x][0], plot_idx[x][1]].imshow(img)
             axes[plot_idx[x][0], plot_idx[x][1]].set_title(f"Width {img_shape[1]}px X Height {img_shape[0]}px")
             axes[plot_idx[x][0], plot_idx[x][1]].set_xticks([])
-            axes[plot_idx[x][0], plot_idx[x][1]].setyticks([])
+            axes[plot_idx[x][0], plot_idx[x][1]].set_yticks([])
         plt.tight_layout()
         st.pyplot(fig=fig)
     else:
