@@ -1,5 +1,13 @@
 # ![Header image saying Powdery Mildew Detector](/assests/images/Brown%20Aesthetic%20Email%20header.png)
 
+## Project Overview
+
+Powdery Mildew Detector is a machine-learning project. This is to assess if a cherry leaf is infected with Powdery Mildew or not. The dataset used is from Kaggle.
+
+## Table of Contents
+
+TBA
+
 ## Dataset Content
 
 - The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
@@ -66,6 +74,9 @@ Though this would not be proven until taken into practice. Whilst each tree woul
 
 - We want a ML model that can quickly identify if a cherry leafe is infected with Powdery Mildew.
 - This should also show the difference between infected and non-infectead leaves
+- The model success metrics are at least 75% recall.
+- The model output is definited as a flag, indicating if the leaf has Powdery Mildew.
+- The training set comes from Kaggle, and contains over 4,000 images.
 
 ## Dashboard Design
 
@@ -78,13 +89,14 @@ Though this would not be proven until taken into practice. Whilst each tree woul
 
 ### Project Hypothesis
 
-- Advises that the hypothesis is that it is possible to distinguish leaves with Powdery Mildew, from healthy leaves.
+- Advises what the hypothesis is
 - Using the data analysis, is able to validate.
 
 ### Leaf Visualizer
 
 - Shows images of leaves with Powdery Mildew, and healthy leaves.
 - A montage is available for the user to view.
+- -Checkboxes used for ease to the user.
 
 ### Mildew Detection
 
@@ -92,10 +104,51 @@ Though this would not be proven until taken into practice. Whilst each tree woul
 - Multiple images can be uploaded for a prediction.
 - An analysis report is provided, this can be downloaded.
 
+## Model Performance Metrics
+
+- Bar chart showing the distribution.
+- Training accuracy and loss
+- Test set performance metrics
+
 ## Unfixed Bugs
 
-- You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 - There are currently no unfixed bugs.
+
+## Bugs
+
+- During deployment, the slug size was too large for Heroku. I moved as much as possible to .slugignore however this was still too large. After speaking with my mentor, this was then uploaded to render.com which worked.
+
+## Epic and User Stories
+
+### Epic 1 - Data Collection and preparation
+
+- As a data analysy, I am able to import the dataset. I am anle to load it within the project to gain further insights.
+- I am able to analyse the data in order to distribute it fairly for a model training purpose.
+
+### Epic 2 - Data Visualization and Exloratory Analysis
+
+- I can genrate average and variabilitiy images, which can be used to display visual differences.
+- I can create an image montage, that can be used to see both healthy or infected leaves.
+- I have generated bar charts to show the dataset distribution of sets. This is to ensure that the data is split evenly accross Training, Validation and Test sets.
+
+## Epic 3 - Model Development and Optimization
+
+- I can fit a ML pipeline, with the data to train the ML model.
+- I can analysie which is the best algorithm.
+- I can carry out oprimisations to ensure the ML gives accurate results.
+
+## Epic 4 -- Dashboard Development
+
+- As a user, I can see the project summary page to understand the purpse.
+- As a user I can see visualizations to understand and verify the outcomes.
+- As a user, I can upload my own images of cherry leaves to check if healthy or infected.
+- As a user I can download a report of my images.
+
+## Epic 5 - Model Evaluation and Deployment
+
+- I want to deploy the model, so that users can interact with it.
+- I can test the system with unseen images.
+- As a user, I want a simple interface.
 
 ## Deployment
 
@@ -128,6 +181,13 @@ Though this would not be proven until taken into practice. Whilst each tree woul
 - render - for hosting the dashboard
 - git/github - for writing and storing the code
 - kaggle - for the data used in the project
+
+## Testing
+
+All code in the app_pages, src directories, and notebooks have been run through PEP8 and passed. The exceptions are:
+
+- Some code was "line too long". This was in importing documentation, or to set up graphs.
+- In pip installation, PEP8 suggested symbols would need to have whitespace. Howevever this would then not work
 
 ## Credits
 
