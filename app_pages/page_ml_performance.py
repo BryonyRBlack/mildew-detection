@@ -4,11 +4,15 @@ import pandas as pd
 from matplotlib.image import imread
 from src.machine_learning.evaluate_clf import load_test_evaluation
 
+
 def page_ml_performance_metrics():
     version = "v1"
     st.write("Train, Validation, and Test Set: Labels Frequencies")
-    labels_distribution = plt.imread(f"outputs/{version}/labels_distribution.png")
-    st.image(labels_distribution, caption="Distribution of labels between Train, Test and Validation")
+    labels_distribution = plt.imread(
+        f"outputs/{version}/labels_distribution.png")
+    st.image(labels_distribution,
+             caption="Distribution of labels "
+             "between Train, Test and Validation")
     st.write("---")
     st.write(f"Model History")
     col1, col2 = st.columns(2)
@@ -20,4 +24,5 @@ def page_ml_performance_metrics():
         st.image(model_loss, caption="Model Training Losses")
     st.write("---")
     st.write(f"Generalised Performance on Test Set")
-    st.dataframe(pd.DataFrame(load_test_evaluation(version), index=["Loss", "Accuracy"]))
+    st.dataframe(pd.DataFrame(load_test_evaluation(version),
+                              index=["Loss", "Accuracy"]))
