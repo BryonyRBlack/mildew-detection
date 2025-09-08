@@ -19,10 +19,12 @@ To save time in this process, the IT team suggested an ML system that detects in
 ### Hypothesis
 
 - That cherry leaves infexted with powdery mildew have a different apperance than healthy cherry leaves.
+- Healthy cherry leaves have mire green visable as proven by their average and variability images.
+- That using Machine Learning, costs can be saved on health checks.
 
 ### Validation
 
-### Dataset
+**Dataset**
 
 - A visual analysis was completeld on the data to see if there was any notable differences. As such, it was possible to note that there was a powdery substance on the leaves infected with Powdery Mildew.
 
@@ -39,14 +41,17 @@ Whilst a leaf with Powdery Mildew:
 ![Average and variability images for an infected leaf](/outputs/v1/avg_var_powdery_mildew.png)
 ![Average and variability images for an infected leaf](/outputs/v1/avg_var_healthy.png)
 
-This showed a clear visual difference between the healthy and infected leaves.
+This showed a clear visual difference between the healthy and infected leaves and confirms the first hypothesis, it also confirms the second, and that more green is visable.
 
-### Model Development
+**Model Development**
 
 - To train a model to be able to differentiate between a healthy and infected leaf. This was then evaluated to check it's accuracy.
 
 ![Image showing the accuracy after model training](/outputs/v1/model_training_acc.png)
 ![Image showing the losses after model training](/outputs/v1/model_training_losses.png)
+
+**Costs**
+Though this would not be proven until taken into practice. Whilst each tree would need leaves taken and photographed, there us ability to upload multiple images at the same time this would save time. This cannot be fully validated at this point.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
