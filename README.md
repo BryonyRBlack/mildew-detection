@@ -6,7 +6,38 @@ Powdery Mildew Detector is a machine-learning project. This is to assess if a ch
 
 ## Table of Contents
 
-TBA
+- [](#)
+  - [Project Overview](#project-overview)
+  - [Table of Contents](#table-of-contents)
+  - [Dataset Content](#dataset-content)
+  - [Business Requirements](#business-requirements)
+  - [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
+    - [Hypothesis](#hypothesis)
+    - [Validation](#validation)
+  - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
+  - [ML Business Case](#ml-business-case)
+  - [Dashboard Design](#dashboard-design)
+    - [Quick Project Summary](#quick-project-summary)
+    - [Project Hypothesis](#project-hypothesis)
+    - [Leaf Visualizer](#leaf-visualizer)
+    - [Mildew Detection](#mildew-detection)
+  - [Model Performance Metrics](#model-performance-metrics)
+  - [Unfixed Bugs](#unfixed-bugs)
+  - [Bugs](#bugs)
+  - [Epic and User Stories](#epic-and-user-stories)
+    - [Epic 1 - Data Collection and preparation](#epic-1---data-collection-and-preparation)
+    - [Epic 2 - Data Visualization and Exloratory Analysis](#epic-2---data-visualization-and-exloratory-analysis)
+    - [Epic 3 - Model Development and Optimization](#epic-3---model-development-and-optimization)
+    - [Epic 4 -- Dashboard Development](#epic-4----dashboard-development)
+    - [Epic 5 - Model Evaluation and Deployment](#epic-5---model-evaluation-and-deployment)
+  - [Deployment](#deployment)
+    - [Render](#render)
+  - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+  - [Testing](#testing)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+  - [Acknowledgements (optional)](#acknowledgements-optional)
 
 ## Dataset Content
 
@@ -131,20 +162,20 @@ Though this would not be proven until taken into practice. Whilst each tree woul
 - I can create an image montage, that can be used to see both healthy or infected leaves.
 - I have generated bar charts to show the dataset distribution of sets. This is to ensure that the data is split evenly accross Training, Validation and Test sets.
 
-## Epic 3 - Model Development and Optimization
+### Epic 3 - Model Development and Optimization
 
 - I can fit a ML pipeline, with the data to train the ML model.
 - I can analysie which is the best algorithm.
 - I can carry out oprimisations to ensure the ML gives accurate results.
 
-## Epic 4 -- Dashboard Development
+### Epic 4 -- Dashboard Development
 
 - As a user, I can see the project summary page to understand the purpse.
 - As a user I can see visualizations to understand and verify the outcomes.
 - As a user, I can upload my own images of cherry leaves to check if healthy or infected.
 - As a user I can download a report of my images.
 
-## Epic 5 - Model Evaluation and Deployment
+### Epic 5 - Model Evaluation and Deployment
 
 - I want to deploy the model, so that users can interact with it.
 - I can test the system with unseen images.
