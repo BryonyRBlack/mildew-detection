@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Powdery Mildew Detector is a machine-learning project. This is to assess if a cherry leaf is infected with Powdery Mildew or not. The dataset used is from Kaggle.
+[Powdery Mildew Detector](https://mildew-detection-xff2.onrender.com/) is a machine-learning project. This is to assess if a cherry leaf is infected with Powdery Mildew or not. The dataset used is from Kaggle.
 
 ## Table of Contents
 
@@ -22,14 +22,14 @@ Powdery Mildew Detector is a machine-learning project. This is to assess if a ch
     - [Leaf Visualizer](#leaf-visualizer)
     - [Mildew Detection](#mildew-detection)
   - [Model Performance Metrics](#model-performance-metrics)
-  - [Unfixed Bugs](#unfixed-bugs)
-  - [Bugs](#bugs)
   - [Epic and User Stories](#epic-and-user-stories)
     - [Epic 1 - Data Collection and preparation](#epic-1---data-collection-and-preparation)
     - [Epic 2 - Data Visualization and Exloratory Analysis](#epic-2---data-visualization-and-exloratory-analysis)
     - [Epic 3 - Model Development and Optimization](#epic-3---model-development-and-optimization)
     - [Epic 4 -- Dashboard Development](#epic-4----dashboard-development)
     - [Epic 5 - Model Evaluation and Deployment](#epic-5---model-evaluation-and-deployment)
+  - [Unfixed Bugs](#unfixed-bugs)
+  - [Bugs](#bugs)
   - [Deployment](#deployment)
     - [Render](#render)
   - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
@@ -37,7 +37,7 @@ Powdery Mildew Detector is a machine-learning project. This is to assess if a ch
   - [Credits](#credits)
     - [Content](#content)
     - [Media](#media)
-  - [Acknowledgements (optional)](#acknowledgements-optional)
+  - [Acknowledgements](#acknowledgements)
 
 ## Dataset Content
 
@@ -94,12 +94,12 @@ Though this would not be proven until taken into practice. Whilst each tree woul
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
-- Business Requirement #1
+- Business Requirement #1 - Data Visualization
   - average images and variability images for each class (healthy or powdery mildew),
   - the differences between average healthy and average powdery mildew cherry leaves,
   - an image montage for each class.
 - Business Requirement #2
-  - You may deliver an ML system that is capable of predicting whether a cherry leaf is healthy or contains powdery mildew. In this case, we suggest to use Neural Networks to map the relationships between the features and the labels.
+  - Build a ML system that is capable of predicting whether a cherry leaf is healthy or contains powdery mildew.
 
 ## ML Business Case
 
@@ -141,22 +141,22 @@ Though this would not be proven until taken into practice. Whilst each tree woul
 - Training accuracy and loss
 - Test set performance metrics
 
-## Unfixed Bugs
-
-- There are currently no unfixed bugs.
-
-## Bugs
-
-- During deployment, the slug size was too large for Heroku. I moved as much as possible to .slugignore however this was still too large. After speaking with my mentor, this was then uploaded to render.com which worked.
-
 ## Epic and User Stories
 
 ### Epic 1 - Data Collection and preparation
 
-- As a data analysy, I am able to import the dataset. I am anle to load it within the project to gain further insights.
+As a data analyst, I need to collect and prepare the data in order to train the model.
+
+User Stories:
+
+- As a data analyst, I am able to import the dataset. I am anle to load it within the project to gain further insights.
 - I am able to analyse the data in order to distribute it fairly for a model training purpose.
 
 ### Epic 2 - Data Visualization and Exloratory Analysis
+
+As a data analyst, I need to visually analyse and explore the date to understand key differences.
+
+User Stories:
 
 - I can genrate average and variabilitiy images, which can be used to display visual differences.
 - I can create an image montage, that can be used to see both healthy or infected leaves.
@@ -164,11 +164,19 @@ Though this would not be proven until taken into practice. Whilst each tree woul
 
 ### Epic 3 - Model Development and Optimization
 
+As a machine learning engineer I need to train a ML model to predict if a leaf is healthy or infected.
+
+User Stories:
+
 - I can fit a ML pipeline, with the data to train the ML model.
 - I can analysie which is the best algorithm.
 - I can carry out oprimisations to ensure the ML gives accurate results.
 
 ### Epic 4 -- Dashboard Development
+
+As a product owner, I need a dashboard which can predict from user uploaded images, and is user-friendly.
+
+User Stories:
 
 - As a user, I can see the project summary page to understand the purpse.
 - As a user I can see visualizations to understand and verify the outcomes.
@@ -177,16 +185,25 @@ Though this would not be proven until taken into practice. Whilst each tree woul
 
 ### Epic 5 - Model Evaluation and Deployment
 
+As a machine learning engineer, I need to test and deploy the model to ensure it works in a real world setting.
+
 - I want to deploy the model, so that users can interact with it.
 - I can test the system with unseen images.
 - As a user, I want a simple interface.
+
+## Unfixed Bugs
+
+- There are currently no unfixed bugs.
+
+## Bugs
+
+- During deployment, the slug size was too large for Heroku. I moved as much as possible to .slugignore however this was still too large. After speaking with my mentor, this was then uploaded to render.com which worked.
 
 ## Deployment
 
 ### Render
 
-- The App live link is: `[here](https://mildew-detection-xff2.onrender.com/)`
-- Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
+- The App live link is: [here](https://mildew-detection-xff2.onrender.com/)
 - The project was deployed to Render using the following steps.
 
 1. Log in to Render and create a Web Service
@@ -233,6 +250,6 @@ All code in the app_pages, src directories, and notebooks have been run through 
 
 - The image for the ReadMe header came from [canva](https://www.canva.com/templates/EAFw8hKewR4-brown-aesthetic-email-header/)
 
-## Acknowledgements (optional)
+## Acknowledgements
 
-- Thank the people who provided support throughout this project.
+- I would like to thank my mentor Mo Shami for his support and guidance during this project.
